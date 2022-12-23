@@ -4,46 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ekaee</title>
-
-    <link rel="stylesheet" href="reset.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main.css" />
+    <meta name="description" content="Ekaansh 'ekaee' Singh personal website" />
+    <title>Ekaansh Singh</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="files/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="files/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <!-- social media tags -->
+    <meta property="og:title" content="Ekaansh Singh" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://ekaee.github.io/files/hophop.png"
+    />
+    <meta property="og:url" content="https://ekaee.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gochi+Hand"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container">
-      <div class="main">
-        <div class="profile-img">
-          <img src="tomato.jpg" alt="tomato cross-section" />
+      <!-- profile image with animated object -->
+      <div class="left">
+        <div class="img-circle">
+          <img src="files/tomato.jpg" alt="Cross-section of tomato" />
         </div>
-        <div class="tomato-hop swing-tomato" id="animation" onclick="bounce()">
-          <img src="hophop.png" alt="badly drawn tomato" />
+        <div
+          class="img-animated tomato-swing"
+          id="animation"
+          onclick="bounce()"
+        >
+          <img src="files/hophop.png" alt="Badly drawn tomato" />
         </div>
-        <div class="indent name">Ekaansh</div>
-        <div class="indent links">
-          <a href="ekaee_resume.pdf" class="link">
-            <div class="button">Resume</div>
-          </a>
-          <a href="https://linkedin.com/in/ekaanshsingh" class="link">
-            <div class="button">LinkedIn</div>
-          </a>
-          <a href="https://github.com/ekaee" class="link">
-            <div class="button">Github</div>
-          </a>
+
+        <div class="warning-text" id="text-change">
+          DO NOT TOUCH THE TOMATO!
         </div>
-        <div class="indent footer" id="text-change">
-          Note: DO NOT TOUCH THE TOMATO!
+      </div>
+
+      <div class="right">
+        <div class="right-wrap">
+          <div class="name">Ekaansh</div>
+          <div class="links">
+            <a href="files/ekaee_resume.pdf" class="link" target="_blank">
+              <span class="button">Resume</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/ekaanshsingh"
+              class="link"
+              target="_blank"
+            >
+              <span class="button">LinkedIn</span>
+            </a>
+            <a href="https://github.com/ekaee" class="link" target="_blank">
+              <span class="button">Github</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <!-- scripts -->
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,176 @@
+:root {
+  --red-gradient: linear-gradient(
+    to right bottom,
+    #ff7171,
+    #f05b57,
+    #e0433c,
+    #cf2a21,
+    #bc0000
+  );
+  --primary-color: rgb(231, 231, 231);
+  --secondary-color: rgb(28, 106, 50);
+  --text-color: rgb(0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--red-gradient);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono";
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* structure */
+
+.container {
+  display: flex;
+  position: relative;
+  width: max-content;
+  background-color: var(--primary-color);
+  border-radius: 80px 80px 0px 0px;
+  padding: 50px 50px 20px 50px;
+}
+
+.container::after {
+  background: linear-gradient(-145deg, var(--primary-color) 20px, transparent 0),
+    linear-gradient(145deg, var(--primary-color) 20px, transparent 0);
+  background-size: 40px;
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+}
+
+.left {
+  width: 90px;
+  height: 300px;
+  padding: 10px;
+  position: relative;
+}
+
+.right {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.right-wrap {
+  text-align: center;
+}
+
+/* profile image and animated object */
+
+.img-circle {
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.img-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.img-animated {
+  top: 70px;
+  left: 0;
+  width: 50px;
+  position: absolute;
+  transform: rotate(-60deg);
+  transform-origin: 96% 25%;
+}
+
+.img-animated img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.tomato-swing {
+  animation: swing ease-in-out 1s infinite alternate;
+}
+
+.tomato-bounce {
+  animation: bounce 2s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-65deg);
+  }
+  100% {
+    transform: rotate(-55deg);
+  }
+}
+
+@keyframes bounce {
+  60%,
+  80%,
+  to {
+    transform: translateY(200px);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  70% {
+    transform: translateY(100px);
+  }
+  90% {
+    transform: translateY(160px);
+  }
+}
+
+.warning-text {
+  color: var(--secondary-color);
+  margin-top: 80px;
+  text-align: center;
+  font-family: "Gochi Hand";
+  font-size: 1rem;
+}
+
+/* name */
+
+.name {
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+/* links */
+
+.links {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.links span {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid var(--text-color);
+}
+
+.links span:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: 1s;
+}
